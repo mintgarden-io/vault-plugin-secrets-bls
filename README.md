@@ -2,6 +2,12 @@
 
 This is a standalone backend plugin for use with [Hashicorp Vault](https://www.github.com/hashicorp/vault). This plugin provides initial BLS12-381 key storage and signing capabilities for [Chia](https://github.com/Chia-Network/chia-blockchain).
 
+Implements BLS signatures using [blst library](https://github.com/supranational/blst.git)
+for cryptographic primitives (pairings, EC, hashing) according to the
+[IETF BLS RFC](https://datatracker.ietf.org/doc/draft-irtf-cfrg-bls-signature/)
+with [these curve parameters](https://datatracker.ietf.org/doc/draft-irtf-cfrg-pairing-friendly-curves/)
+for BLS12-381.
+
 ## Status
 
 **This library has not yet been audited. Use at your own risk.**
@@ -94,3 +100,7 @@ vault delete chiakeys/keys/old_keys/key3
 ## iden3/vault-plugin-secrets-iden3 License
 
 This project is based on [iden3/vault-plugin-secrets-iden3](https://github.com/iden3/vault-plugin-secrets-iden3), licensed under [Apache 2.0](https://github.com/iden3/vault-plugin-secrets-iden3/blob/main/LICENSE).
+
+## BLST license
+
+BLST is used with the [Apache 2.0 license](https://github.com/supranational/blst/blob/master/LICENSE).
